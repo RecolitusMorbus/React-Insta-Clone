@@ -10,8 +10,8 @@ import IGUserIcon from '../../assets/igusericon.png';
 const Header = styled.header`
     width: 100%;
     height: 52px;
-    position: absolute;
-    z-index: 2;
+    // position: absolute;
+    // z-index: 2;
     display: flex;
     justify-content: center;
     background: #ffffff;

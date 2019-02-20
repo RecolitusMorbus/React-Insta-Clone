@@ -36,7 +36,6 @@ class PostPage extends Component {
                     searchTerm={this.state.searchTerm}
                     searchPosts={this.state.searchPostsHandler}
                 />
-
                 <PostsContainer
                     posts={
                         this.state.filteredPosts.length > 0

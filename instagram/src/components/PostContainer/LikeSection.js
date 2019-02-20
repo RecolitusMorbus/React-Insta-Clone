@@ -16,15 +16,15 @@ const LikeSection = props => {
             onClick={props.incrementLike}
             comment
         >
-        <LikeSectionDiv>
-            <i className="far fa-heart" />
-        </LikeSectionDiv>
-        <LikeSectionDiv>
-            <i className="far fa-comment" />
-        </LikeSectionDiv>
+            <LikeSectionDiv>
+                <i className="far fa-heart" />
+            </LikeSectionDiv>
+            <LikeSectionDiv>
+                <i className="far fa-comment" />
+            </LikeSectionDiv>
         </FlexWrapper>,
         <FlexWrapper key="likes-container" comment>
-        <LikeSectionDiv>{props.likes}</LikeSectionDiv>
+            <LikeSectionDiv>{props.likes}</LikeSectionDiv>
         </FlexWrapper>
     ];
 };

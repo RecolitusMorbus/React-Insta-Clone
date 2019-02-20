@@ -21,8 +21,8 @@ const CommentParagraph = styled.p`
 const Comment = props => {
     return (
         <FlexWrapper>
-        <UserName>{props.comment.username}</UserName>
-        <CommentParagraph>{props.comment.text}</CommentParagraph>
+            <UserName>{props.comment.username}</UserName>
+            <CommentParagraph>{props.comment.text}</CommentParagraph>
         </FlexWrapper>
     );
 };

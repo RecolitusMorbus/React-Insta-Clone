@@ -7,9 +7,7 @@ const PostWrapper = styled.div`
     height: 50%;
     width: 45%;
     min-width: 300px;
-    margin-top: 200px;
-    margin: 0 auto 5px;
-    border: 1px solid red;
+    margin: 5px auto 5px;
 `;
 
 const PostsContainer = props => {

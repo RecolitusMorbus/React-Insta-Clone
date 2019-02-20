@@ -5,14 +5,15 @@ import CommentInput from './CommentInput';
 import styled from 'styled-components';
 
 const StyledSection = styled.div`
-    border: 1px solid green;
+    border: none;
 `;
 
 class CommentSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: props.comments
+            comments: props.comments,
+            comment: ''
         };
     }
 
@@ -23,7 +24,6 @@ class CommentSection extends React.Component {
                 comments: JSON.parse(localStorage.getItem(this.props.postId))
             });
         }
-
         else {
             this.setComments();
         }
@@ -46,7 +46,10 @@ class CommentSection extends React.Component {
 
     handleCommentSubmit = e => {
         e.preventDefault();
-        const newComment = { text: this.state.comment, username: 'nolanallen' };
+        const newComment = {
+            text: this.state.comment,
+            username: localStorage.getItem('user')
+        };
         const comments = { text: this.state.comments.slice() };
         comments.push(newComment);
         this.setState({ comments, comment: '' });
@@ -59,7 +62,11 @@ class CommentSection extends React.Component {
         return (
             <StyledSection>
                 {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-                <CommentInput />
+                <CommentInput
+                    comment={this.state.comment}
+                    submitComment={this.handleCommentSubmit}
+                    changeComment={this.commentHandler}
+                />
             </StyledSection>
         )
     }
