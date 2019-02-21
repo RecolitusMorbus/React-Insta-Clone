@@ -3,8 +3,8 @@ import './Posts.css';
 import styled, { css } from 'styled-components';
 
 const PostHeaderDiv = styled.div`
+    padding: 16px;
     display: flex;
-    padding: 10px;
 `;
 
 const PostThumbWrapper = styled.div`
@@ -15,6 +15,7 @@ const PostThumbWrapper = styled.div`
 export const UserName = styled.div`
     font-weight: 500;
     font-size: 0.8em;
+    margin-left: 12px;
     padding: 0 5px;
     ${props =>
         props.bold &&
